@@ -22,7 +22,6 @@
 		<![CDATA[
 			INSERT INTO TB_BOARD
 			(
-				IDX,
 			    TITLE, 
 			    CONTENTS, 
 			    HIT_CNT, 
@@ -32,7 +31,6 @@
 			)
 			VALUES
 			(
-				SEQ_TB_BOARD_IDX.NEXTVAL, 
 			    #{TITLE}, 
 			    #{CONTENTS}, 
 			    0, 
