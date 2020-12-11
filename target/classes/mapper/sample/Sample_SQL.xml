@@ -22,22 +22,18 @@
 		<![CDATA[
 			INSERT INTO TB_BOARD
 			(
-				IDX,
 			    TITLE, 
 			    CONTENTS, 
 			    HIT_CNT, 
 			    DEL_GB, 
-			    CREA_DTM, 
 			    CREA_ID
 			)
 			VALUES
 			(
-				SEQ_TB_BOARD_IDX.NEXTVAL, 
 			    #{TITLE}, 
 			    #{CONTENTS}, 
 			    0, 
 			    'N', 
-			    SYSDATE, 
 			    'Admin'
 			)
 		]]>
@@ -47,7 +43,7 @@
 		<![CDATA[
 			UPDATE TB_BOARD 
 			SET
-				HIT_CNT = NVL(HIT_CNT, 0) + 1
+				HIT_CNT = IFNULL(HIT_CNT, 0) + 1
 			WHERE
 				IDX = #{IDX}	
 		]]>
@@ -62,7 +58,7 @@
 				CREA_DTM,
 				TITLE,
 				CONTENTS
-			FROM
+			FROM 
 				TB_BOARD
 			WHERE
 				IDX = #{IDX}		
