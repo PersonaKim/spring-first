@@ -58,7 +58,7 @@
 				CREA_DTM,
 				TITLE,
 				CONTENTS
-			FROM
+			FROM 
 				TB_BOARD
 			WHERE
 				IDX = #{IDX}		
