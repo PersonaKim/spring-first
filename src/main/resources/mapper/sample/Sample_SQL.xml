@@ -26,7 +26,6 @@
 			    CONTENTS, 
 			    HIT_CNT, 
 			    DEL_GB, 
-			    CREA_DTM, 
 			    CREA_ID
 			)
 			VALUES
@@ -35,7 +34,6 @@
 			    #{CONTENTS}, 
 			    0, 
 			    'N', 
-			    SYSDATE, 
 			    'Admin'
 			)
 		]]>
